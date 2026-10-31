@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #08a9f7;
+    --primary-dark: #078fd2;
+    --heading: #52616d;
+    --text: #87939e;
+    --soft-blue: #e7f7ff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--heading);
+    background-color: white;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, calc(100% - 64px));
+    margin: auto;
+}
+
+.header {
+    background-color: white;
+    box-shadow: 0 2px 12px rgba(35, 67, 85, 0.04);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logoimage{
+    height: 20px;
+    width: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-links a {
+    color: #778590;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.username {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: 12px;
+    background-color: var(--soft-blue);
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+}
+
+.hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+    padding: 54px 0;
+}
+
+.hero-content {
+    flex: 1 1 52%;
+    min-width: 0;
+}
+
+.hero-content h1 {
+    color: var(--heading);
+    font-size: clamp(2.1rem, 3.2vw, 3.1rem);
+    line-height: 1.22;
+    margin-bottom: 16px;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    max-width: 510px;
+    color: var(--text);
+    font-size: 1.03rem;
+    margin-bottom: 26px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(100deg, #05a8f5, #34b8f8);
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1 1 48%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 470px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.services,
+.about,
+.contact {
+    text-align: center;
+    padding: 64px 0;
+}
+
+.services {
+    border-top: 1px solid #edf3f6;
+}
+
+.evil {
+    color: var(--primary-dark);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+    color: var(--heading);
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.services p,
+.about p,
+.contact p {
+    color: var(--text);
+}
+
+.contact {
+    margin-bottom: 42px;
+    padding: 52px 24px;
+    border-radius: 22px;
+    background-color: #f3fbff;
+}
+
+.contact .btn {
+    margin-top: 22px;
+}
+
+.footer {
+    padding: 22px;
+    text-align: center;
+    color: var(--text);
+    font-size: 0.85rem;
+    border-top: 1px solid #edf3f6;
+}
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(100% - 48px, 760px);
+    }
+
+    .navbar {
+        min-height: 72px;
+        gap: 16px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+    }
+
+    .username {
+        min-height: 40px;
+        padding: 0 13px;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        min-height: auto;
+        gap: 30px;
+        padding: 48px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .btn {
+        min-height: 48px;
+        padding: 0 22px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 36px);
+    }
+
+    .navbar {
+        min-height: 72px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.45rem;
+    }
+
+    .username {
+        min-height: 38px;
+        padding: 0 14px;
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
+        padding-top: 30px;
+        padding-bottom: 42px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.85rem, 7.4vw, 2.35rem);
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        min-height: 52px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 390px;
+        height: auto;
+        max-height: 340px;
+        aspect-ratio: 1 / 0.9;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .services,
+    .about,
+    .contact {
+        padding: 42px 0;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+        font-size: 1.65rem;
+    }
+
+    .contact {
+        padding: 42px 18px;
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .username {
+        padding: 0 10px;
+        font-size: 0.72rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
